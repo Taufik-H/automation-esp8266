@@ -13,8 +13,8 @@
 //#define AIO_SERVER      "https://io.adafruit.com/api/v2/xepatan/feeds/led1"
 #define AIO_SERVER      "io.adafruit.com"
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
-#define AIO_USERNAME    "xepatan"            // Replace it with your username
-#define AIO_KEY         "aio_JYgf58bt81v8OfS70UKSReFTrh64"   // Replace with your Project Auth Key
+#define AIO_USERNAME  "kiansantang"
+#define AIO_KEY       "aio_yopz35GDyHqxklQFS8nX5YTnMRM7"
 
 /************ Global State (you don't need to change this!) ******************/
 
@@ -31,12 +31,12 @@ Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO
 
 // Setup a feed called 'onoff' for subscribing to changes.
 
-Adafruit_MQTT_Subscribe Light1 = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME"/feeds/led1"); // FeedName
+Adafruit_MQTT_Subscribe Light1 = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME"/feeds/lamp1"); // FeedName
 
 void MQTT_connect();
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   pinMode(led, OUTPUT);
 
